@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/personal.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/whoami.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/myprojects.css'%}">
+    <link rel="stylesheet"  href="{% static 'css/all.css' %}">
+</head>
+<body>
+    {% include "include/navbar.html"%}
+
+    
+    <!-- Silinece-->
+
+    {% block body %}
+
+    <!--Personal.htmk-->
+   
+    <div class="personal">
+
+    <div class="photo">Fotoğraf Gelicek</div>
+        <div class="personal-info">
+            <div class="personalinfo">Ahmet Mercan</div>
+            <div class="contact">Contact With Me Via...</div>
+        </div>
+        
+        <div class="conctactwith">
+            <div class="git">            
+                <i class="fab fa-github-alt"></i>
+            </div>
+            
+            <div class="bit">     
+                <i class="gg-bitbucket"></i>
+            </div>
+            
+            <div class="linkedin">      
+                <i class="fab fa-linkedin-in"></i>                
+
+            </div>
+        
+            <div class="fb">                
+                <i class="gg-facebook"></i>                     
+ 
+             </div>
+            
+            <div class="instagram">
+                <i class="fab fa-instagram"></i>                
+
+            </div>
+            
+
+
+        </div>
+
+    </div>
+
+    <!-- Who am i ? -->
+
+    <div class="whoami">
+
+
+    </div>
+
+    <!--My Projects-->
+
+    <div class="myprojects">
+
+    </div>
+    
+
+    {% endblock body %}
+</body>
+</html>

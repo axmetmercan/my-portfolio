@@ -1,0 +1,7 @@
+.myprojects {
+    border: dotted;
+    border-width: 15px;
+    border-color: blue;
+    height: 100vh;
+    background-color: cornflowerblue;
+}

@@ -1,0 +1,51 @@
+.personal {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: 500px;
+    grid-template-areas: "photo emtpy"
+                         "photo cont"
+                         "contactwith emtpy";
+}
+
+.photo{
+    height: 250px;
+    width: 200px;
+    border: solid;
+    grid-area: "photo";
+}
+
+.personal-info {
+    width: auto;
+    border: solid;
+    grid-area: "cont";
+    justify-self: center;
+    align-self: center;
+}
+
+.personalinfo {
+    font-size: 45px;
+    height: 100px;
+    width: auto;
+    border: solid;
+    grid-area: "cont";
+    
+}
+
+.contact{
+    height: 30px;
+    width: 150px;
+    text-align: center;
+    text-overflow: none;
+    border: solid;
+    grid-area: "empty";
+}
+
+.conctactwith {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 25px;
+    width: 250px;
+    grid-area: "contactwith .";
+}
