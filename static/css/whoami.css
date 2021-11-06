@@ -1,7 +1,158 @@
 .whoami {
-    border: solid;
-    border-width: 15px;
-    border-color: red;
     height: 100vh;
-    background-color: coral;
+    /*background: linear-gradient(42.5deg, rgba(186, 39, 55, 1) 0%, rgba(186, 39, 55, 1) 51%, rgba(239, 197, 202, 1) 51%, rgba(239, 197, 202, 1) 100%);*/
+    background-color: #222;
+    color: white;
+    display: grid;
+    grid-template-columns: 30% 30% 25% 15%;
+    grid-template-rows: 8vh auto 15vh ;
+    grid-area: "hd hd hd hd"
+               "ab st we hb"
+               "ab st cv cv";
+    padding-left: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    overflow: hidden ;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1rem;
 }
+
+.about-header{
+    width: 100%;
+    /*  display: flex;*/
+    grid-area: "hd";
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    height: 10vh;
+    font-size: 1.2rem;
+    place-self: center;
+  
+    
+}
+
+.sec-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    padding-top: 3vh;
+    
+}
+
+.sec-nav li {
+    list-style: none;
+}
+
+
+
+
+
+.about-content{
+    grid-area: "ab";
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    /*border: solid;*/
+    justify-content: center;
+    padding: 3rem;
+    
+
+
+}
+
+.about-me{
+    border: solid 2px white;
+    background-color: whitesmoke;
+    border-radius: 2rem;
+    color: black;
+    padding: 2rem;
+}
+
+
+.about-me:hover{
+    box-shadow: rgba(216, 211, 226, 0.4) 0 4px 8px, rgba(171, 165, 182, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-0.5rem);
+    transition: transform 1s;
+}
+
+
+
+.contact:focus {
+    box-shadow: #2121c9 0 0 0 1.5px inset, rgba(71, 11, 199, 0.4) 0 2px 4px, rgba(162, 130, 233, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+
+
+.about-study{
+    grid-area: "st";
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    /*border: solid;*/
+    justify-self: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+
+.school{
+    list-style: none;
+}
+
+.school li {
+    text-decoration: none;
+    /*  font-size: 1.2rem;*/
+    padding-bottom: 2rem;
+
+}
+
+
+.work-experiences{
+    grid-area: "we";
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    /*border: solid;*/
+    padding: 3rem;
+
+
+}
+
+.hobbies{
+    grid-area: "hb";
+    /*border: solid;*/
+    padding: 3rem;
+    grid-row-start: 2;
+    grid-row-end: 3;    
+    grid-column-start: 4;
+    grid-column-end: 4;
+
+
+}
+
+
+
+.resume-section{
+    /*border: solid;*/
+    grid-area: "cv";
+    overflow: scroll;
+    padding: 1rem;
+    grid-row-start: 3;
+    grid-row-end: 4;    
+    grid-column-start: 3;
+    grid-column-end: 5;
+
+
+
+}
+
+
+
+
+
+
