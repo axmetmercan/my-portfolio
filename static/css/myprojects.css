@@ -64,7 +64,13 @@
 .pjct-numerator{
     flex-grow: 0.7;
     background-color: whitesmoke;
+    
 }
+
+.project-num{
+    list-style: none;
+}
+
 .pjct-title{
     border: solid 2px blueviolet;
     flex-grow: 7;
@@ -73,6 +79,16 @@
 .pjct-detail{
     border: solid 2px blueviolet;
     flex-grow: 1;
+
+}
+
+
+.btn {
+    width: auto;
+    height: 40px;
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
 
 }
 .pjct-git{

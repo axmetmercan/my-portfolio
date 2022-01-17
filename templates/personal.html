@@ -1,0 +1,42 @@
+{% extends 'layout.html'%}
+
+{% block content %}
+    
+    <div class="personal">
+        
+            <img class= "photo" src="{{personal.picture.url}}" alt="">
+        
+            <div class="personal-info">
+                <div class="personalinfo">{{personal.name }} {{ personal.surname}}</div>
+                <div class="contact">Contact With Me Via...</div>
+            </div>
+         
+            <div class="conctactwith">
+                <div class="inf">            
+                    <a target= "blanck" href={{personal.github}}><i class="fab fa-github-alt" ></i></a>
+                </div>
+                
+                <div class="inf">     
+                    <a target= "blanck"  href="{{personal.bitbucket}}"><i class="gg-bitbucket"></i></a>    
+                </div>
+                
+                <div class="inf">      
+                    <a target= "blanck"  href="{{personal.linkedin}}"><i class="fab fa-linkedin-in"></i></a> 
+
+                </div>
+            
+                <div class="inf">                
+                    <a target= "blanck"  href="{{personal.fb}}"> <i class="gg-facebook"></i></a>                      
+    
+                </div>
+                
+                <div class="inf">
+                    <a target= "blanck"  href="{{personal.instagram }}"><i class="fab fa-instagram"></i></a> 
+
+                </div>
+
+        </div>
+
+    </div>
+    
+{% endblock %}

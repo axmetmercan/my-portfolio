@@ -1,0 +1,119 @@
+{% extends 'layout.html'%}
+
+{% block content %}
+    
+<div class="whoami">
+    <div class="about-header">
+        <ul class="sec-nav">
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Study</a></li>
+            <li><a href="#">Work Experiences</a></li>
+            <li><a href="#">Hobbies</a> </li>
+
+        </ul>
+    </div>
+    <div class="about-content">
+        {% if about_me %}
+           <div class="about-me">
+            <p>
+                {{about_me.about_me }}
+            </p>
+        </div> 
+        {% endif %}
+        
+    </div>
+   
+
+            {% if studies %}  
+            
+            <div class="about-study">
+                <ul class="school about-me">
+            {% for study in studies  %}
+                 <li>
+                <i class="fas fa-user-graduate"></i>
+                {{study.primary_school}} 
+            </li>
+            
+            <li>
+                <i class="fas fa-user-graduate"></i>
+                {{study.high_school}} 
+            </li>
+
+            <li>
+                <i class="fas fa-user-graduate"></i>
+                {{study.bachelor_degree}} 
+            </li>
+
+            {% endfor %}
+                </ul>
+
+
+            </div>
+   
+            {% endif %}
+         
+            {% if workexperiences %}
+                <div class="work-experiences">
+                    <div class="about-me">
+
+                    {% for experience in workexperiences  %}
+                        <p>Company Name: {{experience.company}}</p>
+                        <hr>
+                        <p>Position: {{experience.position}}</p><hr>
+                        <p>Start Date: {{experience.start_date}}</p><hr>
+                        <p>
+                         
+                            {% if experience.end_date == None %}
+                                <br>
+                            {% else %}
+                                <p>End Date: {{experience.end_date}}</p><hr>
+                                <br>
+                            {% endif %}
+                            
+
+                        
+
+                        
+
+                        
+
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+     
+    <div class="hobbies">
+        {% if hobbies %}
+          <div class="about-me">
+            <ul >
+            {% for hobbie in hobbies %}
+                <li>
+                    {{hobbie}}
+                </li>
+              {% endfor %}
+            </ul>
+        </div>  
+        {% endif %}
+        
+    </div>
+
+    {% if resumes %}
+    
+    <div class="resume-section">
+          {% for resume in resumes %}
+                <p>Type: {{resume.resume_name}}</p>
+                <p>Link: <a target="blanck" href="{{resume.link}}">Cv Linki</a></p>
+                <p ><img style="width: 100px; height:100px;" src="{{resume.qr_code_pic.url}}" alt=""></p>             </p>
+          {% endfor %}  
+          
+    </div>
+
+
+    {% endif %}
+    
+
+
+</div>
+
+
+{% endblock  %}

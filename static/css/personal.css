@@ -13,8 +13,7 @@
 .photo{
     position: relative;
     height: 450px;
-    width: 350px;
-    border: solid;
+    width: 250px;
     grid-area: "photo";
     justify-self: end;
     align-self: center;
