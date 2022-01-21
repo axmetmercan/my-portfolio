@@ -15,7 +15,7 @@
     grid-area: tt;
     justify-self: center;
     align-self: center;
-    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .projects-navigator{
     border: solid 2px whitesmoke ;
@@ -59,43 +59,54 @@
     flex-direction: row;
     column-gap: 1rem;
     border: solid 2px green;
+    align-items: center;
 }
 
 .pjct-numerator{
-    flex-grow: 0.7;
-    background-color: whitesmoke;
+    margin-left: 15px;
+    align-items: flex-start;
+    font-size: 18px;
+    font-weight: bold;
     
 }
 
 .project-num{
     list-style: none;
+    
 }
 
 .pjct-title{
-    border: solid 2px blueviolet;
     flex-grow: 7;
+    justify-content: end;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
 
 }
 .pjct-detail{
-    border: solid 2px blueviolet;
-    flex-grow: 1;
+    align-items: center;
 
 }
 
+.pjct-git{
+    align-items: center;
+
+
+}
 
 .btn {
     width: auto;
-    height: 40px;
+    height: auto;
     font-size: 22px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 10px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 30px;
+    border-color: #222;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    
 
 }
-.pjct-git{
-    border: solid 2px blueviolet;
-    flex-grow: 0.7;
 
-}
 
 .pjct-pagination{
     grid-area: pg;

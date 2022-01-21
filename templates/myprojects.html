@@ -4,7 +4,7 @@
 
     
 <div class="myprojects">
-    <div class="projects-title">"MY Projects"</div>
+    <div class="projects-title"> <h1>"MY Projects"</h1> </div>
     
     {% if categories %}
         <div class="projects-navigator">
@@ -26,16 +26,23 @@
                         
                         <ul class="project-num">
                             <li>{{project.id}}</li>
+                            
                         </ul>
         
                     </div>
+
                     <div class="pjct-title">{{project.title}}</div>
+
+
                     <div class="pjct-detail">
                         <a href="{%url 'portfolio:details' project.id %}"><button type="button" class="btn">Details</button></a> 
                     </div>
+
+
                     <div class="pjct-git">
                         <a target="blank" href="{{project.git_link}}"><button type="button" class="btn">GitHub</button></a>
                     </div>
+
                 
                 </div>
             {% endfor %}
