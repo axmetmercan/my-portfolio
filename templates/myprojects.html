@@ -15,7 +15,12 @@
         </ul>
     </div>
     {% else %}
-        
+    <div class="projects-navigator">
+        <ul class="pjct-nav-li">
+                <li> <a href="{{category.name|slugify}}"> <h2>Current Category is: {{projects.0.category}}</h2> </a> </li>
+        </ul>
+    </div>
+
     {% endif %}
     
     <div class="projects-section">
