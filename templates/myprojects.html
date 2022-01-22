@@ -17,7 +17,9 @@
     {% else %}
     <div class="projects-navigator">
         <ul class="pjct-nav-li">
-                <li> <a href="{{category.name|slugify}}"> <h2>Current Category is: {{projects.0.category}}</h2> </a> </li>
+                <li> <a href="{{category.name|slugify}}"> <h4>Current Category is: {{category.name}}</h4> </a> </li>
+                <li> <a href="{%  url 'portfolio:myprojects'  %}"> <i class="fas fa-arrow-circle-left"></i> Go Back</a></li>
+
         </ul>
     </div>
 
@@ -31,7 +33,6 @@
                         
                         <ul class="project-num">
                             <li>{{project.id}}</li>
-                            
                         </ul>
         
                     </div>
@@ -59,7 +60,39 @@
 
         
     </div>
-    <div class="pjct-pagination">Sayfalandırma Divi</div>
+    <div class="pjct-pagination">
+
+        {% if projects.has_other_pages %}
+
+        <ul class="pagination">
+
+            {% if projects.has_previous %}
+              <li><a href="?page={{ projects.previous_page_number }}">&laquo;</a></li>
+            {% else %}
+              <li class=""><span>&laquo;</span></li>
+            {% endif %}
+            {% for i in projects.paginator.page_range %}
+              {% if projects.number == i %}
+                <li class=""><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+              {% else %}
+                <li><a href="?page={{ i }}">{{ i }}</a></li>
+              {% endif %}
+            {% endfor %}
+            {% if projects.has_next %}
+              <li><a href="?page={{ projects.next_page_number }}">&raquo;</a></li>
+            {% else %}
+              <li class=""><span>&raquo;</span></li>
+            {% endif %}
+            
+          </ul>
+
+
+        {% endif %}
+
+
+
+
+    </div>
 
 
     

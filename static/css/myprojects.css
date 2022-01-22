@@ -96,10 +96,10 @@
 .btn {
     width: auto;
     height: auto;
-    font-size: 22px;
+    font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 5px 10px 5px 10px;
-    border-radius: 30px;
+    padding: 3px 8px 3px 8px;
+    border-radius: 40px;
     border-color: #222;
     margin-top: 3px;
     margin-bottom: 3px;
@@ -107,8 +107,41 @@
 
 }
 
+.btn:hover{
+    transition: 800ms;
+    background-color:coral;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+.btn:active{
+    background-color: #222;
+    border: none;
+}
+
 
 .pjct-pagination{
     grid-area: pg;
-    background-color: red;
+    
+}
+
+.pagination{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.pagination li {
+    margin: 3px;
+    background-color: chocolate;
+
+}
+
+.pagination li a {
+    text-decoration:  none;
+    background-color: none;
 }
